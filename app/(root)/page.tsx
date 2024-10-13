@@ -1,4 +1,5 @@
 import HeaderBox from '@/components/ui/HeaderBox';
+import TotalBalanceBox from '@/components/ui/TotalBalanceBox';
 import React from 'react'
 
 // The reason why we don't have to add /auth or /root in the path of the url because these are route groups (They are not added the file based routing)
@@ -17,6 +18,12 @@ const Home = () => {
                         title="Welcome"
                         user={loggedIn?.firstName || 'Guest'}
                         subtext="Access and manage your account and transactions efficiently"
+                    />
+
+                    <TotalBalanceBox 
+                    accounts={[]}
+                    totalBanks={1}
+                    totalCurrentBalance={1250.38}
                     />
                 </header>
             </div>
